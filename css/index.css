@@ -1,0 +1,135 @@
+
+.wrapper {
+  max-width: 1240px;
+  padding: 40px 30px;
+}
+
+.band {
+  width: 800px;
+  height: 30px;
+  border: 1px solid #a4e200;
+  margin: 0 auto 40px;
+}
+
+.band__content {
+  width: 90%;
+  height: 100%;
+  background-color: #63ff81;
+  animation-name: anim-one;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes anim-one {
+  0% {
+    width: 0;
+  }
+}
+
+.rectangle {
+  width: 13%;
+  height: 55px;
+  background-color: #fff461;
+  animation-name: anim-two;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+  margin-bottom: 40px;
+}
+
+.rectangle:hover {
+  animation-play-state: running;
+}
+
+@keyframes anim-two {
+  0% {
+    width: 13%;
+  }
+  100% {
+    width: 100%
+  }
+}
+
+.ball {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #45bf;
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.ball:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-color: #45bf;
+  border-radius: 50%;
+  animation-name: move, move-two;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+}
+
+@keyframes move {
+  0% {
+    animation-timing-function: ease-in;
+  }
+  13% {
+    top: calc(100% - 13px);
+    animation-timing-function: ease-out;
+  }
+  25% {
+    top: calc(75% - 13px);
+    animation-timing-function: ease-in;
+  }
+  38% {
+    top: calc(100% - 13px);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    top: calc(90% - 13px);
+    animation-timing-function: ease-in;
+  }
+  63% {
+    top: calc(100% - 13px);
+    animation-timing-function: ease-out;
+  }
+  75% {
+    top: calc(97% - 13px);
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  100% {
+    top: calc(100% - 13px);
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes move-two {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(185px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
